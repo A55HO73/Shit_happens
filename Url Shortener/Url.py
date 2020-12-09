@@ -1,12 +1,14 @@
-
+import pyautogui as pg
 import pyshorteners as ps
 
-def main():
-    link = input("Enter the Link :")
-    shortener = ps.Shortener()
+link = pg.prompt("Enter Your Url :")
+
+shortener = ps.Shortener()
+
+try :
     x = shortener.tinyurl.short(link)
-    print(x)
+    ps.alert(x)
+except :
+    pg.alert("Please  Check Your Internet Connection")
 
 
-
-main()
