@@ -1,4 +1,5 @@
 
+import pyshorteners as ps
 
 def main():
     link = input("Enter the Link :")
